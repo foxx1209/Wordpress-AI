@@ -1,0 +1,47 @@
+---
+description: AI エージェント向けプロジェクト共通ルール（Orelop WP ベースを維持）
+alwaysApply: true
+---
+
+# AI Project Rules — Orelop WP
+
+## ベース環境（変更禁止）
+
+- Orelop WP の `package.json` スクリプト、`vite.config.ts`、`.wp-env.json`、`ViteHelper.php` は案件都合で書き換えない
+- スタイルの基準は `src/styles/tokens/` と README の vaultcss ルール
+- コミット・依存追加・破壊的 git 操作は `docs/ai/safety-rules.md` に従う
+
+## 作業開始時
+
+### ヒアリングモード（チャットに貼った場合）
+
+`【Orelop WP — 案件ヒアリング開始】` または `【Orelop WP — コンポーネント追加ヒアリング】`  
+→ `docs/ai/workflows/interview-mode.md` に従う。質問 → `project.json`（`components` + `pages`）→ sync → 実装は明示依頼まで待つ
+
+コンポーネント実装依頼例: `components の {slug} を実装して`  
+ページ実装依頼例: `pages の {slug} を実装して`（他 components は触らない）
+
+### 通常のコーディング時
+
+1. `.page-info/project.json` を読む（無ければ CHAT_START のヒアリングを提案）
+2. `npm run page-info:sync` で README を最新化
+3. 対象ページの figma / template / bemBlock を確認してから実装
+4. Figma 実装時は `.cursor/rules/figma-design-system.mdc`
+5. 完了時は `status` を更新し `page-info:sync`
+
+## ドキュメント索引
+
+| 用途 | ファイル |
+|------|----------|
+| 全体 | `docs/ai/README.md` |
+| 指示の出し方 | `docs/ai/coding-instructions.md` |
+| 安全ルール | `docs/ai/safety-rules.md` |
+| 品質チェック | `docs/ai/workflows/quality-checklist.md` |
+| 画像 | `docs/ai/workflows/figma-images.md` |
+| お問い合わせ | `docs/ai/workflows/contact-form.md` |
+| Dev Inspector | `docs/ai/dev-inspector-setup.md` |
+
+## MCP
+
+- プロジェクト: `.mcp.json`（orelop / vaultcss 等）
+- Figma: ユーザー設定の **Figma Developer MCP**（`~/.cursor/mcp.json`）。未設定ならユーザーに設定を案内

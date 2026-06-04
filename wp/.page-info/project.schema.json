@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Orelop WP Page Info",
+  "type": "object",
+  "required": ["project", "pages"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "localUrl": { "type": "string" },
+        "devCommand": { "type": "string" },
+        "adminUrl": { "type": "string" },
+        "theme": { "type": "string" },
+        "productionUrl": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/component" }
+    },
+    "pages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/page" }
+    }
+  },
+  "$defs": {
+    "figmaLinks": {
+      "type": "object",
+      "properties": {
+        "pc": { "type": "string" },
+        "sp": { "type": "string" }
+      }
+    },
+    "component": {
+      "type": "object",
+      "required": ["name", "slug", "bemBlock", "template"],
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string", "description": "実装依頼用 ID（例: header, cta）" },
+        "kind": {
+          "type": "string",
+          "enum": ["layout", "part"],
+          "description": "layout=header/footer, part=template-parts"
+        },
+        "bemBlock": { "type": "string" },
+        "template": { "type": "string" },
+        "css": { "type": "array", "items": { "type": "string" } },
+        "figma": { "$ref": "#/$defs/figmaLinks" },
+        "figmaMeta": {
+          "type": "object",
+          "properties": {
+            "fileKey": { "type": "string" },
+            "nodeIdPc": { "type": "string" },
+            "nodeIdSp": { "type": "string" }
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "bemBlock": { "type": "string" },
+              "figmaNodeId": { "type": "string" }
+            }
+          }
+        },
+        "usedOn": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "使うページ slug（例: front-page, about）"
+        },
+        "figma": { "$ref": "#/$defs/figmaLinks" },
+        "status": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "page": {
+      "type": "object",
+      "required": ["name", "slug", "template", "bemBlock"],
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "path": { "type": "string" },
+        "type": { "type": "string" },
+        "bemBlock": { "type": "string" },
+        "template": { "type": "string" },
+        "templateParts": { "type": "array", "items": { "type": "string" } },
+        "css": { "type": "array", "items": { "type": "string" } },
+        "figma": { "$ref": "#/$defs/figmaLinks" },
+        "figmaMeta": {
+          "type": "object",
+          "properties": {
+            "fileKey": { "type": "string" },
+            "nodeIdPc": { "type": "string" },
+            "nodeIdSp": { "type": "string" }
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "bemBlock": { "type": "string" },
+              "figmaNodeId": { "type": "string" }
+            }
+          }
+        },
+        "designImage": { "type": "string" },
+        "status": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "wp",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "author": "",
+  "browserslist": [
+    "defaults"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "wp-env": "wp-env",
+    "wp:start": "wp-env start",
+    "wp:update": "wp-env start --update",
+    "wp:stop": "wp-env stop",
+    "wp:destroy": "wp-env stop && wp-env destroy",
+    "wp:import": "wp-env run cli wp db import sql/wpenv.sql",
+    "wp:export": "wp-env run cli wp db export sql/wpenv.sql",
+    "wp:reset": "wp-env run cli wp db reset",
+    "wp:serch-replace": "wp-env run cli wp search-replace",
+    "wp:create-user": "wp-env run cli wp user create admin admin@example.com --role=administrator --user_pass=password",
+    "wp:post:create": "node scripts/wp-post-create.mjs",
+    "page-info:sync": "node scripts/sync-page-info.mjs",
+    "page-info:check": "node scripts/sync-page-info.mjs --check",
+    "wp:status": "docker ps",
+    "dev": "wp-env start && wp-env run cli wp theme activate development && vite",
+    "build": "vite build",
+    "deliver": "npm run build && node scripts/pack-deliverable.mjs",
+    "preview": "wp-env start && wp-env run cli wp theme activate production && vite preview",
+    "lint:html": "markuplint \"**/*.html\"",
+    "lint:php": "markuplint \"**/*.php\"",
+    "lint:style": "biome check --write ./src && stylelint --fix **/*.{css,scss,sass}",
+    "lint:script": "biome check --write ./src",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{html}": [
+      "markuplint",
+      "prettier --write"
+    ],
+    "*.{php}": [
+      "markuplint"
+    ],
+    "*.{css,scss}": [
+      "biome check --write",
+      "stylelint --fix"
+    ],
+    "*.{ts,tsx,js,jsx}": "biome check --write"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "@biomejs/biome": "^2.4.12",
+    "@hilosiva/biome-config": "^0.0.5",
+    "@hilosiva/stylelint-config": "^0.0.3",
+    "@hilosiva/vite-plugin-image-optimizer": "^0.3.0",
+    "@hilosiva/vite-plugin-php-loader": "^0.2.0",
+    "@hilosiva/markuplint-config": "^0.0.5",
+    "@markuplint/php-parser": "^4.6.23",
+    "@wordpress/env": "^11.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "markuplint": "^4.14.1",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.8.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^7.7.0",
+    "vaultscript": "^0.2.4",
+    "vite": "^7.3.2",
+    "vite-plugin-static-copy": "^4.1.0",
+    "vaultcss": "^0.3.5",
+    "vite-plugin-vaultcss": "^0.3.2",
+    "gsap": "latest",
+    "@splidejs/splide": "latest"
+  },
+  "volta": {
+    "node": "22.12.0"
+  }
+}

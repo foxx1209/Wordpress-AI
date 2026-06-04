@@ -1,0 +1,13 @@
+{
+  "name": "dev-inspector-server",
+  "version": "1.0.0",
+  "description": "Dev Inspector CLIサーバー - WebSocket経由でSCSS/HTML編集",
+  "bin": {
+    "dev-inspector": "./bin.js"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "ws": "^8.16.0",
+    "glob": "^10.3.0"
+  }
+}

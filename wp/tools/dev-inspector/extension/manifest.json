@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Dev Inspector — カスタムテンプレート",
+  "description": "【カスタムテンプレート用】ページ上の要素を検証し、SCSS/HTMLを直接編集できるインスペクターツール",
+  "version": "2.0.0",
+  "permissions": ["activeTab", "scripting", "tabs", "clipboardWrite"],
+  "action": {
+    "default_title": "Dev Inspector ON/OFF",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+W",
+        "mac": "Alt+W"
+      },
+      "description": "DivInspector WordPress ON/OFF"
+    },
+    "toggle-inspector": {
+      "suggested_key": {
+        "default": "Alt+E",
+        "mac": "Alt+E"
+      },
+      "description": "WordPress Inspector 起動/終了"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "orelop": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "orelop-mcp@0.3.0"
+      ]
+    },
+    "configs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "configs-mcp@0.1.2"
+      ]
+    },
+    "vaultcss": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vaultcss-mcp@0.1.4"
+      ]
+    },
+    "vite-plugins": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vite-plugins-mcp@0.1.0"
+      ]
+    },
+    "lightningcss-plugins": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "lightningcss-plugins-mcp@0.3.1"
+      ]
+    }
+  }
+}

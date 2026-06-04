@@ -1,0 +1,110 @@
+{
+  "$schema": "./project.schema.json",
+  "project": {
+    "name": "（未設定）",
+    "localUrl": "http://localhost:8080",
+    "devCommand": "npm run dev",
+    "adminUrl": "http://localhost:8080/wp-admin/",
+    "theme": "development（src/）",
+    "productionUrl": "",
+    "notes": ""
+  },
+  "components": [
+    {
+      "name": "ヘッダー",
+      "slug": "header",
+      "kind": "layout",
+      "bemBlock": "l-header",
+      "template": "src/header.php",
+      "css": ["src/styles/components/header.css"],
+      "figma": { "pc": "", "sp": "" },
+      "figmaMeta": { "fileKey": "", "nodeIdPc": "", "nodeIdSp": "" },
+      "usedOn": ["all"],
+      "status": "未着手"
+    },
+    {
+      "name": "フッター",
+      "slug": "footer",
+      "kind": "layout",
+      "bemBlock": "l-footer",
+      "template": "src/footer.php",
+      "css": ["src/styles/components/footer.css"],
+      "figma": { "pc": "", "sp": "" },
+      "figmaMeta": { "fileKey": "", "nodeIdPc": "", "nodeIdSp": "" },
+      "usedOn": ["all"],
+      "status": "未着手"
+    },
+    {
+      "name": "CTA（例・不要なら削除）",
+      "slug": "cta",
+      "kind": "part",
+      "bemBlock": "c-cta",
+      "template": "src/template/parts/c-cta.php",
+      "css": ["src/styles/components/cta.css"],
+      "figma": { "pc": "", "sp": "" },
+      "usedOn": ["front-page", "about"],
+      "status": "未着手",
+      "notes": "ヒアリングで使わない場合は AI が削除してよい"
+    }
+  ],
+  "_comment": "編集後は npm run page-info:sync。手順は docs/ai/AI_CODING_README.md",
+  "pages": [
+    {
+      "name": "TOP",
+      "slug": "front-page",
+      "path": "/",
+      "type": "front-page",
+      "bemBlock": "p-top",
+      "template": "src/front-page.php",
+      "templateParts": ["src/template/parts/"],
+      "css": ["src/styles/pages/front-page.css"],
+      "figma": {
+        "pc": "",
+        "sp": ""
+      },
+      "figmaMeta": {
+        "fileKey": "",
+        "nodeIdPc": "",
+        "nodeIdSp": ""
+      },
+      "sections": [
+        { "name": "MV", "bemBlock": "p-top__mv", "figmaNodeId": "" }
+      ],
+      "designImage": ".page-info/designs/front-page.png",
+      "status": "未着手",
+      "notes": ""
+    },
+    {
+      "name": "会社概要",
+      "slug": "about",
+      "path": "/about/",
+      "type": "page",
+      "bemBlock": "p-about",
+      "template": "src/page-about.php",
+      "templateParts": [],
+      "css": ["src/styles/pages/about.css"],
+      "figma": { "pc": "", "sp": "" },
+      "figmaMeta": { "fileKey": "", "nodeIdPc": "", "nodeIdSp": "" },
+      "sections": [],
+      "designImage": ".page-info/designs/about.png",
+      "status": "未着手",
+      "notes": ""
+    },
+    {
+      "name": "お問い合わせ",
+      "slug": "contact",
+      "path": "/contact/",
+      "type": "page",
+      "bemBlock": "p-contact",
+      "template": "src/page-contact.php",
+      "templateParts": [],
+      "css": ["src/styles/pages/contact.css"],
+      "figma": { "pc": "", "sp": "" },
+      "figmaMeta": { "fileKey": "", "nodeIdPc": "", "nodeIdSp": "" },
+      "sections": [],
+      "designImage": ".page-info/designs/contact.png",
+      "status": "未着手",
+      "notes": ""
+    }
+  ]
+}

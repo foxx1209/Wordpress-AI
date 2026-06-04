@@ -1,0 +1,22 @@
+# クライアント納品用 git archive から除外（開発・AI 専用）
+# 例: git archive --format=zip HEAD -o release/source.zip
+
+.cursor export-ignore
+.page-info export-ignore
+docs/ai export-ignore
+tools export-ignore
+scripts export-ignore
+post-data export-ignore
+.mcp.json export-ignore
+.husky export-ignore
+.github export-ignore
+.vscode export-ignore
+types export-ignore
+sql export-ignore
+node_modules export-ignore
+dist export-ignore
+deliverable export-ignore
+release export-ignore
+.deliverableignore export-ignore
+docs/ORELOP_TECHNICAL.md export-ignore
+CLAUDE.md export-ignore

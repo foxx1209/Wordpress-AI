@@ -1,0 +1,22 @@
+# npm run deliver のパッケージから除外するパス（開発・AI 専用）
+# 納品物は deliverable/ 以下の dist テーマのみ
+
+.cursor/
+.page-info/
+docs/ai/
+tools/
+scripts/
+post-data/
+.mcp.json
+.husky/
+.github/
+.vscode/
+types/
+sql/
+node_modules/
+src/
+public/
+plugins/
+*.log
+.env
+.env.*

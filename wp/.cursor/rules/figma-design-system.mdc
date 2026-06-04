@@ -1,0 +1,104 @@
+---
+description: Figma MCP でデザインを実装するときのルール（Orelop WP）。PHP + vaultcss CSS + Vite。既存の biome / stylelint / markuplint を優先する。
+globs: ["src/**/*.php", "src/styles/**/*.css", "src/styles/**/*.scss"]
+alwaysApply: false
+---
+
+# Figma Design System Rules — Orelop WP
+
+## Project Stack（変更禁止）
+
+- **CMS**: WordPress（wp-env、`development` / `production` テーマ）
+- **Templating**: PHP（`src/` がテーマルート）
+- **Styling**: vaultcss + CSS Nesting（`src/styles/`）。Sass 利用時は `global.scss` 可
+- **Build**: Vite（`src/` → `dist/`）。アセットは `ViteHelper` 経由
+- **Lint**: biome / stylelint / markuplint（README 準拠）
+
+---
+
+## File Locations
+
+| Type | Path |
+|------|------|
+| PHP templates | `src/page-{slug}.php`, `src/front-page.php`, `src/template/` |
+| Styles | `src/styles/`（トークン: `tokens/tokens.css`, MQ: `tokens/mediaqueries.css`） |
+| Images (Vite) | `src/assets/images/`（`main.js` の glob で取り込み） |
+| Static (copy) | `public/` → ビルド後 `dist/`。参照は `ViteHelper::PUBLIC_URL()` |
+| Project index | `.page-info/README.md` |
+
+---
+
+## BEM Naming（案件で採用する場合）
+
+- **Pages**: `p-{block}__element--modifier`
+- **Layouts**: `l-{block}`
+- **Components**: `c-{block}`
+- **Utilities**: `u-{class}`
+
+日本語セクション名は英語 kebab のブロック名に翻訳（例: 採用 → `p-recruit`）。
+
+---
+
+## Design Tokens
+
+`src/styles/tokens/tokens.css` の CSS 変数を優先。案件開始時に Figma から色・フォントを取得し、**不足分のみ**トークンを追加する。
+
+- ブレイクポイント: `@custom-media --sm` 〜 `--xxl`（`tokens/mediaqueries.css`）
+- 流体タイポ: `fluid()`（vaultcss、README 参照）
+- スペース: `--space-*`, `--torem`
+
+ハードコードはトークン未定義の色・一時的な値に限る。
+
+---
+
+## Figma MCP Required Workflow
+
+1. **Parse URL**: `fileKey` と `nodeId`（`node-id=14001-8` → `14001:8`）
+2. **Get design context**: Figma Developer MCP の `get_figma_data`（レイアウト・色・タイポ）
+3. **Download assets**: `download_figma_images`（SVG・アイコンは自作しない）
+4. **Translate**:
+   - React/Tailwind の出力はそのまま使わない → PHP + プロジェクト CSS
+   - フォント名を `--font-*` / `tokens.css` に合わせる
+5. **Create files**:
+   - PHP: `src/page-{slug}.php` または `src/template/parts/`
+   - CSS: `src/styles/components/` またはページ用 CSS（プロジェクト構成に合わせる）
+   - 画像: `src/assets/images/`
+6. **Update** `.page-info/README.md` のステータス列
+7. **Validate**: `docs/ai/workflows/quality-checklist.md` を 2 周実行
+
+---
+
+## PHP Template Pattern
+
+```php
+<?php
+/**
+ * Template Name: Example
+ */
+get_header(); ?>
+<main class="l-main">
+  <section class="p-example">
+    <div class="p-example__inner">
+      <!-- content -->
+    </div>
+  </section>
+</main>
+<?php get_footer(); ?>
+```
+
+`get_template_part('template/parts/...')` で部品化。
+
+---
+
+## Image Handling
+
+- Figma MCP の `localhost` 画像 URL はそのまま利用可
+- 新規アイコンパッケージは追加しない（Figma 素材を使用）
+- 最適化: Vite の image optimizer または `cwebp`（`docs/ai/workflows/figma-images.md`）
+
+---
+
+## Asset Rules
+
+- SVG は Figma から取得（手書き・推測禁止）
+- `vite.config.ts` / `ViteHelper.php` / `functions.php` の既存構成を壊さない
