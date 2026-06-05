@@ -39,8 +39,9 @@ npm run page-info:check     # 同期漏れがあると終了コード 1（CI 向
 | 新規案件の立ち上げ | [workflows/new-project.md](./workflows/new-project.md) |
 | Figma → コーディング | `.cursor/rules/figma-design-system.mdc` |
 | 画像の追加 | [workflows/figma-images.md](./workflows/figma-images.md) |
-| お問い合わせ（CF7） | [workflows/contact-form.md](./workflows/contact-form.md) |
-| 完了後の品質チェック | [workflows/quality-checklist.md](./workflows/quality-checklist.md) |
+| お問い合わせ（CF7） | [workflows/contact-form.md](./workflows/contact-form.md) / CHAT_START |
+| テスト環境 FTP | [workflows/deploy-test.md](./workflows/deploy-test.md) / `npm run deploy:test` |
+| 完了後の品質チェック（**2周・厳守**） | [workflows/quality-checklist.md](./workflows/quality-checklist.md) |
 | 指示の出し方 | [coding-instructions.md](./coding-instructions.md) |
 | 安全ルール | [safety-rules.md](./safety-rules.md) |
 | ブラウザ↔CSS 直編集 | [dev-inspector-setup.md](./dev-inspector-setup.md) |

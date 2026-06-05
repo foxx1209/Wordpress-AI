@@ -22,6 +22,8 @@ lerna-debug.log*
 # environment variables
 .env
 .env.production
+.env.local
+.deploy-test.json
 
 # macOS-specific files
 .DS_Store

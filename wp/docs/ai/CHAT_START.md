@@ -131,4 +131,61 @@ components の header と footer を実装して
 pages の about（会社概要）を実装して。header/footer/cta は触らないで
 ```
 
-詳しい説明: [AI_CODING_README.md](./AI_CODING_README.md)
+## 品質チェックを頼む
+
+実装後:
+
+```
+docs/ai/workflows/quality-checklist.md に従って2周チェックして報告して。ブラウザは開かないで。
+```
+
+---
+
+## コピー用：お問い合わせ CF7（ここから）
+
+```
+【Orelop WP — お問い合わせ（CF7）ヒアリング開始】
+
+コーディングはまだしない。質問だけしてください。
+
+1. Figma URL（お問い合わせページ PC / SP）
+2. フォーム項目一覧（テキスト・メール・電話・チェック・セレクト等、必須/任意）
+3. クライアント指定のメール文面（なければ「デフォルトでOK」）
+4. 管理画面ログイン（.env の WP_USER/WP_PASS 済みか、手動ログインか）
+5. CF7 は未インストールならユーザーにインストール許可を確認
+
+回答後:
+- `.page-info/project.json` の contact ページに figma を反映
+- `npm run page-info:sync`
+- 「実装して」と言われるまでコード・CF7設定を始めない
+
+実装時は docs/ai/workflows/contact-form.md に厳守:
+- SVG は Figma 必須
+- バリデーションは送信時のみ
+- CF7 の set_properties+save 禁止（update_post_meta 使用）
+- src/page-contact.php + CSS（vaultcss）
+```
+
+## お問い合わせ CF7（ここまで）
+
+---
+
+## コピー用：テスト環境デプロイ（ここから）
+
+```
+【Orelop WP — テスト環境デプロイ】
+
+1. .deploy-test.json がなければ .deploy-test.json.example をコピーするよう案内
+2. ユーザーに FTP 情報を質問（host / user / password / remotePath）
+   または FileZilla のサイト名（filezillaSiteName）
+3. remotePath は wp-content/themes/テーマ名/ まで含める
+4. 設定を .deploy-test.json に書き込む（パスワードは .env に逃がしても可）
+5. docs/ai/workflows/deploy-test.md に従い npm run deploy:test を実行
+6. 結果を報告（ローカル dist → リモートパス）
+
+注意: src/ ではなく dist/ をアップロード。npm run build は deploy:test 内で実行される。
+```
+
+## テスト環境デプロイ（ここまで）
+
+---

@@ -24,6 +24,7 @@
     "wp:post:create": "node scripts/wp-post-create.mjs",
     "page-info:sync": "node scripts/sync-page-info.mjs",
     "page-info:check": "node scripts/sync-page-info.mjs --check",
+    "deploy:test": "node scripts/deploy-test.mjs",
     "wp:status": "docker ps",
     "dev": "wp-env start && wp-env run cli wp theme activate development && vite",
     "build": "vite build",

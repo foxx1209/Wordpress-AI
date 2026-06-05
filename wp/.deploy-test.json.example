@@ -1,0 +1,10 @@
+{
+  "_comment": "コピーして .deploy-test.json にリネーム（gitignore 済み）。パスワードはコミットしない。",
+  "host": "ftp.example.com",
+  "user": "your-ftp-user",
+  "password": "",
+  "remotePath": "/example.com/public_html/test-site/wp-content/themes/your-theme/",
+  "localPath": "dist",
+  "sslVerify": false,
+  "filezillaSiteName": ""
+}

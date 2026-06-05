@@ -29,6 +29,15 @@
 
 [docs/ai/safety-rules.md](docs/ai/safety-rules.md) を優先。
 
+## 品質チェック
+
+実装完了後: [docs/ai/workflows/quality-checklist.md](docs/ai/workflows/quality-checklist.md) を全行読み **2 周** 実行。ブラウザは開かない。
+
+## お問い合わせ / デプロイ
+
+- CF7: [docs/ai/workflows/contact-form.md](docs/ai/workflows/contact-form.md)
+- FTP: [docs/ai/workflows/deploy-test.md](docs/ai/workflows/deploy-test.md) → `npm run deploy:test`
+
 ## 入口
 
 ルート [README.md](README.md)

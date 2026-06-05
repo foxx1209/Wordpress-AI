@@ -28,6 +28,7 @@ alwaysApply: true
 3. 対象ページの figma / template / bemBlock を確認してから実装
 4. Figma 実装時は `.cursor/rules/figma-design-system.mdc`
 5. 完了時は `status` を更新し `page-info:sync`
+6. コーディング完了後は `docs/ai/workflows/quality-checklist.md` を **2 周** 実行して報告（ブラウザは開かない）
 
 ## ドキュメント索引
 
