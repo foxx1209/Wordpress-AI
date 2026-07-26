@@ -84,7 +84,7 @@ AI はコーディング開始前に **必ず** `project.json` を読み、必�
 
 | # | ページ名 | スラッグ | URL | BEM | Figma | PHP | CSS | パーツ | デザイン画像 | ステータス |
 |---|----------|----------|-----|-----|-------|-----|-----|--------|--------------|------------|
-| 1 | TOP | `front-page` | `/` | `p-top` | — | `src/front-page.php` | `src/styles/pages/front-page.css` | `src/template/parts/` | `.page-info/designs/front-page.png` | 未着手 |
+| 1 | TOP | `front-page` | `/` | `p-top` | [PC](https://www.figma.com/design/NNWE5RvCgDfQJc0hpwztrW/?node-id=2006-6) | `src/front-page.php` | `src/styles/pages/front-page.css` | `src/template/parts/` | `.page-info/designs/front-page.png` | 進行中 |
 | 2 | 会社概要 | `about` | `/about/` | `p-about` | — | `src/page-about.php` | `src/styles/pages/about.css` | — | `.page-info/designs/about.png` | 未着手 |
 | 3 | お問い合わせ | `contact` | `/contact/` | `p-contact` | — | `src/page-contact.php` | `src/styles/pages/contact.css` | — | `.page-info/designs/contact.png` | 未着手 |
 
@@ -98,17 +98,18 @@ AI はコーディング開始前に **必ず** `project.json` を読み、必�
 | ローカル URL | `http://localhost:8080/` |
 | BEM ブロック | `p-top` |
 | テンプレート | `src/front-page.php` |
-| Figma PC | — |
+| Figma PC | https://www.figma.com/design/NNWE5RvCgDfQJc0hpwztrW/?node-id=2006-6 |
 | Figma SP | — |
-| fileKey | `—` |
-| nodeId（PC） | `—` |
+| fileKey | `NNWE5RvCgDfQJc0hpwztrW` |
+| nodeId（PC） | `2006:6` |
 | nodeId（SP） | `—` |
-| ステータス | 未着手 |
+| ステータス | 進行中 |
 
 **セクション / クラス**
 
-- **MV**: `p-top__mv`
+- **MV**: `p-top__mv` — node `2006:6`
 
+**メモ**: MV の shape-bg（リングSVGアニメーション）のみ実装。他セクションは未着手。
 
 ### 2. 会社概要 (`about`)
 

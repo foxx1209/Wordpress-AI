@@ -1,0 +1,30 @@
+.p-top__mv {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  overflow: clip;
+}
+
+.p-top__mv-inner {
+  position: relative;
+  z-index: 1;
+  padding-inline: var(--offset-md);
+}
+
+.p-top__mv-en {
+  font-family: var(--font-sans-en);
+  font-size: fluid(32px 72px);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+}
+
+
+.p-top__mv-ja {
+  margin-top: var(--space-sm);
+  font-size: fluid(18px 28px);
+  font-weight: 900;
+  line-height: var(--leading-loose);
+  color: rgb(0 0 0 / 0.8);
+  letter-spacing: var(--tracking-wider);
+}

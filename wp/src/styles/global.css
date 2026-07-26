@@ -1,4 +1,4 @@
-@layer tokens, reset, base, components, utilities;
+@layer tokens, reset, base, components, pages, utilities;
 
 /* Tokens */
 @import "./tokens/tokens.css" layer(tokens);
@@ -14,6 +14,10 @@
 /* Components */
 @import "./components/grid.css" layer(components);
 @import "./components/container.css" layer(components);
+@import "./components/shape-bg.css" layer(components);
+
+/* Pages */
+@import "./components/p-top-fv.css" layer(pages);
 
 /* Utilities */
 @import "./utilities/utilities.css" layer(utilities);

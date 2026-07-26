@@ -59,20 +59,20 @@
       "templateParts": ["src/template/parts/"],
       "css": ["src/styles/pages/front-page.css"],
       "figma": {
-        "pc": "",
+        "pc": "https://www.figma.com/design/NNWE5RvCgDfQJc0hpwztrW/?node-id=2006-6",
         "sp": ""
       },
       "figmaMeta": {
-        "fileKey": "",
-        "nodeIdPc": "",
+        "fileKey": "NNWE5RvCgDfQJc0hpwztrW",
+        "nodeIdPc": "2006:6",
         "nodeIdSp": ""
       },
       "sections": [
-        { "name": "MV", "bemBlock": "p-top__mv", "figmaNodeId": "" }
+        { "name": "MV", "bemBlock": "p-top__mv", "figmaNodeId": "2006:6" }
       ],
       "designImage": ".page-info/designs/front-page.png",
-      "status": "未着手",
-      "notes": ""
+      "status": "進行中",
+      "notes": "MV の shape-bg（リングSVGアニメーション）のみ実装。他セクションは未着手。"
     },
     {
       "name": "会社概要",

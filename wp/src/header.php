@@ -10,7 +10,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<!-- 
   <header class="header">
     <p class="header__title">
       <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
@@ -22,4 +22,4 @@
       'container_attr' => ['aria-label' => 'グローバル'],
     ]);
     ?>
-  </header>
+  </header> -->

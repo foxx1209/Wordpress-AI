@@ -16,7 +16,16 @@ export default defineConfig({
   base: "./",
   publicDir: `../${dir.publicDir}`,
   plugins: [
-    vaultcss(), 
+    vaultcss({
+      fluid:{
+        minViewPort: 375,
+         maxViewPort: 1920,
+         baseFontSize: 16,
+         // snap モードを使う場合
+         minCompSize: 440,
+         maxCompSize: 1440,
+      }
+    }), 
     vitePhpLoader({
       useWpEnv: true,
     }),
