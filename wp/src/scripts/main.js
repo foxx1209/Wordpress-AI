@@ -9,22 +9,20 @@ import.meta.glob(["../assets/images/**"]);
 
 import "../styles/global.css";
 
+import { initHeader } from "./modules/header.js";
 import { initShapeBg } from "./modules/shape-bg.js";
 
 initShapeBg();
+initHeader();
 
-
-  !(function () {
-    const viewport = document.querySelector('meta[name="viewport"]');
-    function switchViewport() {
-      const value =
-        window.outerWidth > 375
-          ? 'width=device-width,initial-scale=1'
-          : 'width=375';
-      if (viewport.getAttribute('content') !== value) {
-        viewport.setAttribute('content', value);
-      }
+!(() => {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value = window.outerWidth > 375 ? "width=device-width,initial-scale=1" : "width=375";
+    if (viewport.getAttribute("content") !== value) {
+      viewport.setAttribute("content", value);
     }
-    addEventListener('resize', switchViewport, false);
-    switchViewport();
-  })();
+  }
+  addEventListener("resize", switchViewport, false);
+  switchViewport();
+})();

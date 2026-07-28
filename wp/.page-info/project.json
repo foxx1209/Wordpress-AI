@@ -14,13 +14,14 @@
       "name": "ヘッダー",
       "slug": "header",
       "kind": "layout",
-      "bemBlock": "l-header",
+      "bemBlock": "p-header",
       "template": "src/header.php",
       "css": ["src/styles/components/header.css"],
-      "figma": { "pc": "", "sp": "" },
-      "figmaMeta": { "fileKey": "", "nodeIdPc": "", "nodeIdSp": "" },
+      "figma": { "pc": "https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=1-12722", "sp": "https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2001-4" },
+      "figmaMeta": { "fileKey": "ckXVIwQA8GTjVZMDNWSfW9", "nodeIdPc": "1:12722", "nodeIdSp": "2001:4" },
       "usedOn": ["all"],
-      "status": "未着手"
+      "status": "完了",
+      "notes": "ブレイクポイント: --header-nav(60rem/960px)。PC navの文字が改行しない最小幅でSPに切替。SPドロワーメニューは http://linkosk.xsrv.jp/ のメニュー構造・開閉挙動を踏襲。採用情報/お知らせは未実装ページのため # リンク仮置き。"
     },
     {
       "name": "フッター",
@@ -57,22 +58,22 @@
       "bemBlock": "p-top",
       "template": "src/front-page.php",
       "templateParts": ["src/template/parts/"],
-      "css": ["src/styles/pages/front-page.css"],
+      "css": ["src/styles/components/p-top-fv.css"],
       "figma": {
-        "pc": "https://www.figma.com/design/NNWE5RvCgDfQJc0hpwztrW/?node-id=2006-6",
-        "sp": ""
+        "pc": "https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2005-5",
+        "sp": "https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2005-6"
       },
       "figmaMeta": {
-        "fileKey": "NNWE5RvCgDfQJc0hpwztrW",
-        "nodeIdPc": "2006:6",
-        "nodeIdSp": ""
+        "fileKey": "ckXVIwQA8GTjVZMDNWSfW9",
+        "nodeIdPc": "2005:5",
+        "nodeIdSp": "2005:6"
       },
       "sections": [
-        { "name": "MV", "bemBlock": "p-top__mv", "figmaNodeId": "2006:6" }
+        { "name": "MV", "bemBlock": "p-top__mv", "figmaNodeId": "2005:5" }
       ],
       "designImage": ".page-info/designs/front-page.png",
       "status": "進行中",
-      "notes": "MV の shape-bg（リングSVGアニメーション）のみ実装。他セクションは未着手。"
+      "notes": "MV の shape-bg（リングSVGアニメーション）、mv-en/mv-ja（PC/SPでcoding済み・768pxで切替）を実装。PC見出しは「LINKING POSSIBILITIES」、SPは「FORWARD TOGETHER」とFigma側でコピーが異なるため別要素で出し分け。他セクションは未着手。"
     },
     {
       "name": "会社概要",

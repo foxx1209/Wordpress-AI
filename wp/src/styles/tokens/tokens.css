@@ -27,7 +27,7 @@
   /* Color */
   --color-blue-50: #1e1a07;
   --color-grey: #b5b4ac;
-
+  --color-dark: hsl(0, 0%, 0%);
 
   --base-background-color: #fff;
   --base-color: var(--color-dark);
@@ -50,7 +50,7 @@
   --font-xl: calc(var(--font-base) * var(--font-ratio) / 5 * var(--torem));
   --font-2xl: calc(var(--font-base) * var(--font-ratio) / 3 * var(--torem));
 
-    /* Font Size */
+  /* Font Size */
   --font-fluid-xs: fluid(10.667px 12.8px);
   --font-fluid-sm: fluid(14.222px 16px);
   --font-fluid-md: fluid(16px 18.286px);
@@ -166,8 +166,6 @@
     50% calc(75% - var(--arrow-width)),
     var(--arrow-width) 25%
   );
-
-
 
   /* Transition & Animation */
   --duration-fast: 0.3s;

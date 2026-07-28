@@ -6,3 +6,5 @@
 @custom-media --lg (width >= 1440px);
 @custom-media --xl (width >= 80rem);
 @custom-media --xxl (width >= 96rem);
+
+@custom-media --header-nav (width >= 60rem);

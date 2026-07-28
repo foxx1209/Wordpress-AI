@@ -5,19 +5,17 @@
 
 /* Reset */
 @import "./reset/reset.css" layer(reset);
-
-/* Base */
-@import "./base/html.css" layer(base);
-@import "./base/a.css" layer(base);
-@import "./base/hn.css" layer(base);
+@import "./base/base.css" layer(reset);
+@import "./base/html.css" layer(reset);
 
 /* Components */
 @import "./components/grid.css" layer(components);
 @import "./components/container.css" layer(components);
 @import "./components/shape-bg.css" layer(components);
+@import "./components/header.css" layer(components);
 
 /* Pages */
-@import "./components/p-top-fv.css" layer(pages);
+@import "./components/top-fv.css" layer(pages);
 
 /* Utilities */
 @import "./utilities/utilities.css" layer(utilities);

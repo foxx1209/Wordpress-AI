@@ -25,7 +25,7 @@ AI はコーディング開始前に **必ず** `project.json` を読み、必�
 
 | # | 名前 | slug | 種別 | BEM | テンプレート | CSS | Figma | ステータス |
 |---|------|------|------|-----|--------------|-----|-------|------------|
-| 1 | ヘッダー | `header` | `layout` | `l-header` | `src/header.php` | `src/styles/components/header.css` | — | 未着手 |
+| 1 | ヘッダー | `header` | `layout` | `p-header` | `src/header.php` | `src/styles/components/header.css` | [PC](https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=1-12722) / [SP](https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2001-4) | 完了 |
 | 2 | フッター | `footer` | `layout` | `l-footer` | `src/footer.php` | `src/styles/components/footer.css` | — | 未着手 |
 | 3 | CTA（例・不要なら削除） | `cta` | `part` | `c-cta` | `src/template/parts/c-cta.php` | `src/styles/components/cta.css` | — | 未着手 |
 
@@ -36,15 +36,16 @@ AI はコーディング開始前に **必ず** `project.json` を読み、必�
 | 項目 | 値 |
 |------|-----|
 | 種別 | layout（全ページ） |
-| BEM | `l-header` |
+| BEM | `p-header` |
 | テンプレート | `src/header.php` |
 | 使うページ | `all` |
-| Figma PC | — |
-| Figma SP | — |
-| ステータス | 未着手 |
+| Figma PC | https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=1-12722 |
+| Figma SP | https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2001-4 |
+| ステータス | 完了 |
 
 実装依頼例: `components の header を実装して`
 
+**メモ**: ブレイクポイント: --header-nav(60rem/960px)。PC navの文字が改行しない最小幅でSPに切替。SPドロワーメニューは http://linkosk.xsrv.jp/ のメニュー構造・開閉挙動を踏襲。採用情報/お知らせは未実装ページのため # リンク仮置き。
 
 ### 2. フッター (`slug: footer`)
 
@@ -84,7 +85,7 @@ AI はコーディング開始前に **必ず** `project.json` を読み、必�
 
 | # | ページ名 | スラッグ | URL | BEM | Figma | PHP | CSS | パーツ | デザイン画像 | ステータス |
 |---|----------|----------|-----|-----|-------|-----|-----|--------|--------------|------------|
-| 1 | TOP | `front-page` | `/` | `p-top` | [PC](https://www.figma.com/design/NNWE5RvCgDfQJc0hpwztrW/?node-id=2006-6) | `src/front-page.php` | `src/styles/pages/front-page.css` | `src/template/parts/` | `.page-info/designs/front-page.png` | 進行中 |
+| 1 | TOP | `front-page` | `/` | `p-top` | [PC](https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2005-5) / [SP](https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2005-6) | `src/front-page.php` | `src/styles/components/p-top-fv.css` | `src/template/parts/` | `.page-info/designs/front-page.png` | 進行中 |
 | 2 | 会社概要 | `about` | `/about/` | `p-about` | — | `src/page-about.php` | `src/styles/pages/about.css` | — | `.page-info/designs/about.png` | 未着手 |
 | 3 | お問い合わせ | `contact` | `/contact/` | `p-contact` | — | `src/page-contact.php` | `src/styles/pages/contact.css` | — | `.page-info/designs/contact.png` | 未着手 |
 
@@ -98,18 +99,18 @@ AI はコーディング開始前に **必ず** `project.json` を読み、必�
 | ローカル URL | `http://localhost:8080/` |
 | BEM ブロック | `p-top` |
 | テンプレート | `src/front-page.php` |
-| Figma PC | https://www.figma.com/design/NNWE5RvCgDfQJc0hpwztrW/?node-id=2006-6 |
-| Figma SP | — |
-| fileKey | `NNWE5RvCgDfQJc0hpwztrW` |
-| nodeId（PC） | `2006:6` |
-| nodeId（SP） | `—` |
+| Figma PC | https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2005-5 |
+| Figma SP | https://www.figma.com/design/ckXVIwQA8GTjVZMDNWSfW9/Link%E6%A7%98%E3%80%80%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%A8--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2005-6 |
+| fileKey | `ckXVIwQA8GTjVZMDNWSfW9` |
+| nodeId（PC） | `2005:5` |
+| nodeId（SP） | `2005:6` |
 | ステータス | 進行中 |
 
 **セクション / クラス**
 
-- **MV**: `p-top__mv` — node `2006:6`
+- **MV**: `p-top__mv` — node `2005:5`
 
-**メモ**: MV の shape-bg（リングSVGアニメーション）のみ実装。他セクションは未着手。
+**メモ**: MV の shape-bg（リングSVGアニメーション）、mv-en/mv-ja（PC/SPでcoding済み・768pxで切替）を実装。PC見出しは「LINKING POSSIBILITIES」、SPは「FORWARD TOGETHER」とFigma側でコピーが異なるため別要素で出し分け。他セクションは未着手。
 
 ### 2. 会社概要 (`about`)
 

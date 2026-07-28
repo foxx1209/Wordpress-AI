@@ -21,8 +21,8 @@ export default defineConfig({
         minViewPort: 375,
          maxViewPort: 1920,
          baseFontSize: 16,
-         // snap モードを使う場合
-         minCompSize: 440,
+         mode: "snap",     
+         minCompSize: 375,
          maxCompSize: 1440,
       }
     }), 

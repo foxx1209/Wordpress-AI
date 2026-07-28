@@ -1,4 +1,4 @@
-:where(.container ) {
+:where(.container) {
   --container-name: container;
   --layout: flow-root;
   --max-size: none;

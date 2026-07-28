@@ -1,27 +1,27 @@
 <?php get_header(); ?>
 
-<div class="c-shape-bg" data-shape-bg aria-hidden="true">
-  <span class="c-shape-bg__item c-shape-bg__item--green" data-shape-el="green">
-    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bg-4.svg')); ?>" alt="" width="726" height="726">
-  </span>
-  <span class="c-shape-bg__item c-shape-bg__item--blue" data-shape-el="blue">
-    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bg-3.svg')); ?>" alt="" width="829" height="829">
-  </span>
-  <span class="c-shape-bg__item c-shape-bg__item--red" data-shape-el="red">
-    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bg-2.svg')); ?>" alt="" width="932" height="932">
-  </span>
-  <span class="c-shape-bg__item c-shape-bg__item--yellow" data-shape-el="yellow">
-    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bg-1.svg')); ?>" alt="" width="932" height="931">
-  </span>
-</div>
+<?php get_template_part('template/top-bg'); ?>
 <main>
   <section class="p-top__mv" data-mv>
-
     <div class="p-top__mv-inner">
-      <p class="p-top__mv-en">LINKING<br>POSSIBILITIES</p>
-      <p class="p-top__mv-ja">可能性をつなぎ、<br>豊かな未来をつくる</p>
+      <div class="p-top__mv-title-wrapper">
+        <p class="p-top__mv-ja">可能性をつなぎ、<br>豊かな未来をつくる</p>
+        <picture class="p-top__mv-title-en">
+          <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri() ?>/assets/images/top/mv-title-sp.svg">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/top/mv-title-pc.svg" alt="" width="951" height="233" decoding="async" loading="lazy">
+        </picture>
+      </div>
     </div>
   </section>
+
+  <div class="p-blur">
+    <div class="p-blur__wrapper">
+      <section class="p-mission">
+        
+      </section>
+    </div>
+  </div>
+
 </main>
 
 <?php get_footer(); ?>
