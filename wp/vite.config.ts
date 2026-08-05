@@ -78,6 +78,10 @@ export default defineConfig({
     host: true,
   },
 
+  preview: {
+    host: true,
+  },
+
   css: {
     devSourcemap: true,
   },
