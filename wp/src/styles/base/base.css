@@ -1,0 +1,99 @@
+.l-inner {
+  inline-size: min(100%, calc(1240 * var(--torem)));
+  padding-inline: calc(15 * var(--torem));
+  margin-inline: auto;
+}
+
+body {
+  background-color: #f7f2f7;
+}
+.u-sp {
+  display: block;
+  @media (--md) {
+    display: none;
+  }
+}
+
+.u-pc {
+  display: none;
+  @media (--md) {
+    display: block;
+  }
+}
+.p-blur {
+  position: relative;
+  z-index: 2;
+}
+.p-blur::before {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.p-arrow {
+  margin-block-start: calc(35 * var(--torem));
+  display: flex;
+  justify-content: center;
+
+  img {
+    display: block;
+    inline-size: calc(30 * var(--torem));
+    block-size: calc(104 * var(--torem));
+    position: relative;
+    aspect-ratio: 30 / 104;
+    @media (--md) {
+      margin-block-start: calc(147 * var(--torem));
+      block-size: calc(221 * var(--torem));
+      inline-size: calc(40 * var(--torem));
+    }
+  }
+}
+
+/* コンテナ */
+.l-container {
+  width: 100%;
+  max-width: calc(var(--content-width) + var(--content-padding-x) * 2);
+  margin: 0 auto;
+  padding: 0 var(--content-padding-x);
+}
+
+/* セクション共通余白 */
+.l-section {
+  padding: var(--section-padding-y) 0;
+}
+
+.l-header-offset {
+  padding-top: 82px;
+}
+
+.c-btn.c-btn--outline{
+  background-color: transparent; 
+    color: var(--color-text);
+    border-color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    padding: 0 var(--space-8);
+    height: 55px;
+    font-family: var(--font-ja);
+    font-size: var(--text-base);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing-base);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), opacity var(--transition-fast);
+    white-space: nowrap;
+    text-decoration: none;
+    border: 2px solid;
+}
+
+#main-content{
+  background-color: #fff;
+}

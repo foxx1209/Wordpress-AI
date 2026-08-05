@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Page: RECRUIT 採用情報 — page-recruit.php
+
+   このファイル単体 + 下記の共通依存があれば、page-recruit.php を
+   他案件へそのまま移植できる。
+     - base/_variables.css（CSS変数）
+     - base/_reset.css
+     - base/_typography.css（.c-section-heading の基本スタイル）
+     - style.css 内ユーティリティ（.l-container / .l-section）
+     - layout/_header.css（.l-header-offset）
+     - pages/_news-archive.css（.p-news-archive — NEWS一覧と同一構成のため共用）
+   ========================================================================== */
+
+/* --------------------------------------------------
+   ページ全体
+-------------------------------------------------- */
+body.page-template-page-recruit,
+body.page-recruit,
+body.error404 .p-recruit-page,
+.p-recruit-page {
+  background: #fff !important;
+}
+
+/* --------------------------------------------------
+   見出し（.c-section-heading の上書き）
+-------------------------------------------------- */
+.p-recruit-page .c-section-heading {
+  text-align: center;
+}
+
+.p-recruit-page .c-section-heading__en {
+  display: block;
+  font-family: var(--font-en, 'Outfit', sans-serif) !important;
+  font-size: clamp(40px, 4vw, 58px) !important;
+  font-weight: 900 !important;
+  letter-spacing: .08em !important;
+  line-height: 1 !important;
+}
+
+.p-recruit-page .c-section-heading__ja {
+  display: block;
+  margin-top: 12px !important;
+  color: #333 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: .2em !important;
+  line-height: 1.5 !important;
+}
+
+/* --------------------------------------------------
+   コンテンツ（Coming soon / Wantedly案内 / 戻るボタン）
+-------------------------------------------------- */
+.p-recruit-page__content {
+  width: min(860px, 100%);
+  margin: clamp(64px, 6vw, 96px) auto 0;
+  padding: clamp(62px, 6vw, 96px) 0;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  text-align: center;
+}
+
+.p-recruit-page__coming {
+  margin: 0;
+  color: #222;
+  font-family: var(--font-en, 'Outfit', sans-serif);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.2;
+}
+
+.p-recruit-page__wantedly {
+  margin: 14px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: #454545;
+}
+
+.p-recruit-page__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-width: 250px;
+  height: 58px;
+  margin-top: clamp(42px, 4vw, 58px);
+  padding: 0 28px 0 42px;
+  border-radius: 999px;
+  background: #222;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.p-recruit-page__back:hover {
+  opacity: .82;
+  transform: translateY(-1px);
+}
+
+.p-recruit-page__back-icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  transform: rotate(180deg);
+}
+
+.p-recruit-page__back-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.p-recruit-page__back-icon svg path,
+.p-recruit-page__back-icon svg line,
+.p-recruit-page__back-icon svg circle {
+  stroke: currentColor;
+}
+
+/* --------------------------------------------------
+   スマートフォン
+-------------------------------------------------- */
+@media (max-width: 767px) {
+  .p-recruit-page .c-section-heading__en {
+    font-size: 32px !important;
+  }
+
+  .p-recruit-page .c-section-heading__ja {
+    margin-top: 9px !important;
+    font-size: 10px !important;
+  }
+
+  .p-recruit-page__content {
+    margin-top: 48px;
+    padding: 54px 0;
+  }
+
+  .p-recruit-page__coming {
+    font-size: 26px;
+  }
+
+  .p-recruit-page__wantedly {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .p-recruit-page__back {
+    min-width: 220px;
+    height: 52px;
+    margin-top: 36px;
+    padding: 0 24px 0 34px;
+    font-size: 12px;
+  }
+}

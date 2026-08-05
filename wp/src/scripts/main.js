@@ -8,12 +8,23 @@ import.meta.glob(["../assets/images/**"]);
 /* --------- 　ここまで編集禁止  ------------- */
 
 import "../styles/global.css";
+import "@splidejs/splide/css/core";
 
+import { createModal } from "vaultscript";
+import { initContactForm } from "./modules/contact-form.js";
 import { initHeader } from "./modules/header.js";
+import { initModalClose } from "./modules/modal.js";
+import { initScrollFadein } from "./modules/scroll-fadein.js";
 import { initShapeBg } from "./modules/shape-bg.js";
+import { initVoiceSlider } from "./modules/voice-slider.js";
 
 initShapeBg();
 initHeader();
+createModal();
+initModalClose();
+initVoiceSlider();
+initContactForm();
+initScrollFadein();
 
 !(() => {
   const viewport = document.querySelector('meta[name="viewport"]');

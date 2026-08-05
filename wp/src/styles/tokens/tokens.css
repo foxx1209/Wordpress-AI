@@ -23,12 +23,15 @@
   --design-width-sm: 375;
   /* --design-width-md: 768; */
   --design-width-lg: 1440;
+  --content-width: 1175px;
 
   /* Color */
   --color-blue-50: #1e1a07;
   --color-grey: #b5b4ac;
   --color-dark: hsl(0, 0%, 0%);
-
+  --btn-green: #67b63e;
+  --btn-red: #f50021;
+  --btn-yellow: #ffec11;
   --base-background-color: #fff;
   --base-color: var(--color-dark);
   --base-line-height: 1.5;
@@ -38,6 +41,9 @@
   --font-sans-en: "Montserrat", "Helvetica Neue", "Arial", system-ui, sans-serif;
   --font-sans-mix: "Montserrat", "Noto Sans JP", sans-serif;
   --base-font-family: var(--font-sans-ja);
+  --font-en: mundial, sans-serif;
+  --font-mobo: MOBO, sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 
   /* Font Size */
   --font-base: 16;
@@ -197,6 +203,112 @@
   --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
+  /* --------------------------------------------------
+     Font（Link）
+  -------------------------------------------------- */
+  --font-ja: "Noto Sans JP", var(--font-en), sans-serif;
+
+  /* --------------------------------------------------
+     Color — ブランドカラー（Link）
+     ※ Figma のデザイントークンが確定した場合は更新してください。
+  -------------------------------------------------- */
+  --color-primary: #2c6b3f;
+  --color-primary-hover: #235631;
+  --color-accent-pink: #ffe8e8;
+  --color-accent-green: #3db460;
+  --color-hero-red: #ff3b30;
+  --color-hero-green: #4cd964;
+  --color-hero-blue: #007aff;
+  --color-hero-yellow: #ffd60a;
+  --color-modal-catch: #ff3b30;
+
+  /* --------------------------------------------------
+     Color — UI / テキスト（Link）
+  -------------------------------------------------- */
+  --color-text: #1c1c1c;
+  --color-text-secondary: #666666;
+  --color-text-light: #999999;
+  --color-text-white: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-light: #f7f7f7;
+  --color-bg-dark: #1c1c1c;
+  --color-bg-overlay: rgba(0, 0, 0, 0.8);
+  --color-border: #e0e0e0;
+  --color-border-light: #f0f0f0;
+  --color-focus: #007aff;
+
+  /* --------------------------------------------------
+     Typography（Link）
+  -------------------------------------------------- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+
+  --line-height-base: 1.8;
+  --line-height-heading: 1.4;
+  --line-height-tight: 1.2;
+
+  --letter-spacing-base: 0.04em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-en: 0.02em;
+
+  /* --------------------------------------------------
+     Spacing（Link）
+  -------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  --section-padding-y: 7.5rem;
+  --section-padding-y-sp: 4rem;
+  --content-padding-x: 2.5rem;
+  --content-padding-x-sp: 1.25rem;
+
+  /* --------------------------------------------------
+     Radius（Link）
+  -------------------------------------------------- */
+  --radius-xl: 20px;
+
+  /* --------------------------------------------------
+     Shadow（Link）
+  -------------------------------------------------- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* --------------------------------------------------
+     z-index（Link）
+  -------------------------------------------------- */
+  --z-header: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-overlay: 290;
+
+  /* --------------------------------------------------
+     Transition（Link）
+  -------------------------------------------------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-modal: 300ms ease;
+
   /* Viewport  */
   --viewport: var(--design-width-sm);
 
@@ -206,5 +318,27 @@
 
   @media (--lg) {
     --viewport: var(--design-width-lg);
+  }
+}
+
+/* --------------------------------------------------
+   タブレット（〜1199px）向け変数上書き（Link）
+-------------------------------------------------- */
+@media (max-width: 1199px) {
+  :root {
+    --section-padding-y: 5rem;
+    --content-padding-x: 2rem;
+  }
+}
+
+/* --------------------------------------------------
+   スマートフォン（〜767px）向け変数上書き（Link）
+-------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --section-padding-y: var(--section-padding-y-sp);
+    --content-padding-x: var(--content-padding-x-sp);
+    --text-4xl: 2.25rem;
+    --text-5xl: 2.75rem;
   }
 }

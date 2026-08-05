@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Page: PRIVACY POLICY プライバシーポリシー — page-privacy-policy.php
+
+   このファイル単体 + 下記の共通依存があれば、page-privacy-policy.php を
+   他案件へそのまま移植できる。
+     - base/_variables.css（CSS変数）
+     - base/_reset.css
+     - base/_typography.css（.c-section-heading の基本スタイル）
+     - style.css 内ユーティリティ（.l-container / .l-section）
+     - layout/_header.css（.l-header-offset）
+   ========================================================================== */
+
+.p-privacy {
+  padding: 150px 0 110px;
+  background: #fff;
+}
+
+.p-privacy__container {
+  max-width: 980px;
+}
+
+.p-privacy__heading {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.p-privacy__body {
+  max-width: 880px;
+  margin: 0 auto;
+  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.p-privacy__body section + section {
+  margin-top: 54px;
+}
+
+.p-privacy__body h2 {
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.p-privacy__body p,
+.p-privacy__body li {
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: .015em;
+}
+
+.p-privacy__body p {
+  margin: 0;
+}
+
+.p-privacy__body ol {
+  margin: 18px 0 0;
+  padding-left: 1.5em;
+}
+
+.p-privacy__body li + li {
+  margin-top: 8px;
+}
+
+/* --------------------------------------------------
+   スマートフォン
+-------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .p-privacy {
+    padding: 112px 0 72px;
+  }
+
+  .p-privacy__container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .p-privacy__heading {
+    margin-bottom: 48px;
+  }
+
+  .p-privacy__body section + section {
+    margin-top: 38px;
+  }
+
+  .p-privacy__body h2 {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .p-privacy__body p,
+  .p-privacy__body li {
+    font-size: 12.5px;
+    line-height: 1.9;
+  }
+}

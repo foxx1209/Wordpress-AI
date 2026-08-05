@@ -7,15 +7,35 @@
 @import "./reset/reset.css" layer(reset);
 @import "./base/base.css" layer(reset);
 @import "./base/html.css" layer(reset);
+@import "./base/font-face.css" layer(reset);
 
 /* Components */
 @import "./components/grid.css" layer(components);
 @import "./components/container.css" layer(components);
+@import "./components/title.css" layer(components);
 @import "./components/shape-bg.css" layer(components);
 @import "./components/header.css" layer(components);
+@import "./components/footer.css" layer(components);
+@import "./components/modal.css" layer(components);
+@import "./components/top-fv.css" layer(components);
+@import "./components/mission.css" layer(components);
+@import "./components/buziness.css" layer(components);
+@import "./components/business-detail.css" layer(components);
+@import "./components/business__service.css" layer(components);
+@import "./components/company.css" layer(components);
+@import "./components/news.css" layer(components);
+@import "./components/section-heading.css" layer(components);
+@import "./components/contact.css" layer(components);
+@import "./components/catch.css" layer(components);
+@import "./components/news-single.css" layer(components);
+@import "./components/recruit.css" layer(components);
+@import "./components/privacy.css" layer(components);
+
+
 
 /* Pages */
-@import "./components/top-fv.css" layer(pages);
+@import "./pages/archive-news.css" layer(pages);
 
 /* Utilities */
 @import "./utilities/utilities.css" layer(utilities);
+@import "./utilities/fadein.css" layer(utilities);

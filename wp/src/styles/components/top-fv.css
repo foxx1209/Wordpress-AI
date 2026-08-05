@@ -3,54 +3,75 @@
   display: grid;
   align-items: center;
   block-size: calc(626 * var(--torem));
-  overflow: clip;
+  overflow-x: clip;
   @media (--md) {
-    block-size: calc(1090 * var(--torem));
+    block-size: fluid(930px 1090px, 1440px 1920px, fit);
   }
 }
 
 .p-top__mv-inner {
   position: relative;
-  padding-inline: var(--offset-md);
+  @media (--md) {
+    padding-inline-start: fluid(170px 254px, 1440px 1920px, fit);
+  }
 }
 .p-top__mv-title-wrapper {
   position: relative;
-  z-index: 111;
-}
-
-.p-top__mv-title-en img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  inline-size: calc(335 * var(--torem));
-  block-size: calc(99 * var(--torem));
-  object-fit: contain;
-  mix-blend-mode: plus-lighter;
-  opacity: 0.2;
-  transform: translate(-50%, -50%);
-
+  display: grid;
+  place-content: center;
+  margin-block-start: -44px;
+  justify-content: center;
   @media (--md) {
-    inline-size: calc(967 * var(--torem));
-    block-size: calc(262 * var(--torem));
+    justify-content: flex-start;
   }
 }
 
 .p-top__mv-ja {
   position: relative;
   z-index: 11;
-  margin-top: var(--space-xs);
   font-family: var(--font-sans-ja);
-  font-size: calc(27 * var(--torem));
+  font-size: fluid(27px 40px, 375px 768px, fit);
   font-weight: 900;
   line-height: var(--leading-loose);
   color: rgb(0 0 0 / 0.8);
   text-align: center;
   letter-spacing: 0.2em;
+  display: block;
 
   @media (--md) {
-    margin-top: var(--space-md);
-    font-size: calc(56.628 * var(--torem));
+    font-size: fluid(40px 56px, 768px 1440px, fit);
     text-align: left;
+  }
+  @media (--xxl) {
+    font-size: calc(65 * var(--torem));
+  }
+}
+.p-top__mv-en {
+  font-family: var(--font-en);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  mix-blend-mode: overlay;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: fluid(65px 90px, 375px 768px, fit);
+  inline-size: fit-content;
+  line-height: calc(65 / 56);
+  top: 50%;
+  left: 50%;
+  color: #fbf8fb;
+  white-space: nowrap;
+
+  @media (--md) {
+    top: 0;
+    font-size: fluid(90px 141px, 768px 1440px, fit);
+    line-height: calc(141 / 135);
+    left: -55px;
+    top: -25%;
+    transform: initial;
+  }
+  @media (--xxl) {
+    top: -32%;
+    left: -120px;
+    font-size: calc(197 * var(--torem));
   }
 }

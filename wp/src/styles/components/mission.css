@@ -1,0 +1,189 @@
+.p-mission {
+  position: relative;
+  padding-block-start: calc(100 * var(--torem));
+  padding-block-end: calc(157 * var(--torem));
+
+  @media (--md) {
+    padding-block-start: calc(260 * var(--torem));
+    padding-block-end: calc(442 * var(--torem));
+  }
+}
+
+.p-mission__title {
+  font-size: calc(40 * var(--torem));
+  font-family: var(--font-en);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  @media (--md) {
+    font-size: fluid(40px 100px, 768px 1440px, fit);
+  }
+}
+
+.p-mission__lead {
+  margin-block-start: calc(27 * var(--torem));
+  font-family: var(--font-sans-ja);
+  font-size: fluid(18px 30px, 375px 768px, fit);
+  font-weight: 800;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.3em;
+  color: rgb(0 0 0 / 0.8);
+
+  @media (--md) {
+    margin-block-start: fluid(60px 120px, 768px 1440px, fit);
+    font-size: fluid(18px 30px, 768px 1440px, fit);
+
+    line-height: calc(51 / 30);
+  }
+}
+
+.p-mission__lead-break {
+  @media (--md) {
+    display: none;
+  }
+}
+
+.p-mission__text {
+  font-family: var(--font-sans-ja);
+  font-weight: 600;
+  color: rgb(0 0 0 / 0.8);
+  font-size: fluid(12px 20px, 375px 768px, fit);
+  line-height: calc(24 / 12);
+  margin-block-start: calc(25 * var(--torem));
+  letter-spacing: 0.07em;
+  @media (--md) {
+    font-size: fluid(12px 20px, 768px 1440px, fit);
+    margin-block-start: calc(35 * var(--torem));
+  }
+}
+
+.p-mission__text--sp {
+  margin-block-start: calc(25 * var(--torem));
+  font-size: calc(14 * var(--torem));
+  line-height: calc(30 / 14);
+  letter-spacing: 0.08em;
+}
+
+@media (--md) {
+  .p-mission__text--pc {
+    display: block;
+    margin-block-start: calc(40 * var(--torem));
+    font-size: calc(20 * var(--torem));
+    line-height: calc(46 / 20);
+    letter-spacing: 0.2em;
+  }
+
+  .p-mission__text--sp {
+    display: none;
+  }
+}
+
+@media (--lg) {
+  .p-mission__text--pc {
+    line-height: fluid(46px 49px, 1440px 1920px, fit);
+  }
+}
+
+.p-mission__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: calc(25 * var(--torem));
+  margin-block-start: calc(50 * var(--torem));
+  align-items: center;
+
+  @media (--md) {
+    flex-direction: row;
+    gap: calc(46 * var(--torem));
+    margin-block-start: calc(120 * var(--torem));
+    align-items: baseline;
+  }
+
+  @media (--lg) {
+    /* decreasing value: calc()-only output, matches shape-bg.css precedent for non-increasing ranges */
+    gap: fluid(46px 41px, 1440px 1920px, fit);
+  }
+}
+
+.p-mission__modal {
+  display: contents;
+}
+
+.p-mission__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: calc(306 * var(--torem));
+  block-size: calc(70 * var(--torem));
+  padding: 0;
+  cursor: pointer;
+  background-color: var(--color-dark);
+  border: none;
+  border-radius: 999px;
+  transition: opacity var(--duration-fast) var(--ease-out-quart);
+
+  @media (--md) {
+    inline-size: calc(305 * var(--torem));
+    block-size: calc(65 * var(--torem));
+  }
+
+  @media (--lg) {
+    inline-size: fluid(305px 352px, 1440px 1920px, fit);
+    block-size: fluid(65px 75px, 1440px 1920px, fit);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-mission__btn-text {
+  display: block;
+  font-family: var(--font-sans-en);
+  font-size: calc(20 * var(--torem));
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff;
+
+  @media (--lg) {
+    font-size: fluid(20px 25px, 1440px 1920px, fit);
+  }
+}
+
+.p-mission__btn-icon {
+  position: absolute;
+  inset-inline-end: calc(21 * var(--torem));
+  inset-block-start: 50%;
+  inline-size: calc(20 * var(--torem));
+  block-size: calc(20 * var(--torem));
+  translate: 0 -50%;
+  display: flex;
+  align-items: center;
+}
+.p-mission__btn-icon::before {
+  content: "";
+  inline-size: calc(20 * var(--torem));
+  background-color: var(--btn-green);
+  block-size: calc(3 * var(--torem));
+  display: block;
+  border-radius: 3px;
+  flex-shrink: 0;
+  /* transform: translateX(9px); */
+}
+.p-mission__btn-icon::after {
+  content: "";
+  block-size: calc(20 * var(--torem));
+  inline-size: calc(3 * var(--torem));
+  display: block;
+  border-radius: 3px;
+  background-color: var(--btn-red);
+  transform: translateX(-11px);
+  flex-shrink: 0;
+}
+.p-mission__btn-icon.--value::before {
+  background-color: var(--btn-red);
+}
+.p-mission__btn-icon.--value::after {
+  background-color: var(--btn-yellow);
+}

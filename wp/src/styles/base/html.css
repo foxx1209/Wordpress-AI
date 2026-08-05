@@ -6,3 +6,7 @@
   color-scheme: light dark;
   -webkit-font-smoothing: antialiased;
 }
+
+:where(body) {
+  position: relative;
+}

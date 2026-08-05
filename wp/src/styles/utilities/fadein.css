@@ -1,0 +1,25 @@
+/* --------------------------------------------------
+   スクロールフェードイン（下から）
+   対象要素に .js-fadein を付与すると、画面内に入った時に
+   下からフェードインする（scroll-fadein.js とセット）
+-------------------------------------------------- */
+.js-fadein {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity var(--duration-normal) var(--ease-out-quart),
+    transform var(--duration-normal) var(--ease-out-quart);
+}
+
+.js-fadein.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-fadein {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

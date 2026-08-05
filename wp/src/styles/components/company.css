@@ -1,0 +1,55 @@
+.p-company {
+  padding-block-start: calc(115 * var(--torem));
+  position: relative;
+  @media (--md) {
+    padding-block-endxj: fluid(115px 341px, 768px 1440px, fit);
+  }
+}
+
+.p-company__table {
+  margin-block-start: calc(56 * var(--torem));
+  inline-size: fluid(300px 500px, 375px 768px, fit);
+
+  margin-inline: auto;
+
+  @media (--md) {
+    margin-block-start: fluid(50px 132px, 375px 1440px, fit);
+    inline-size: fluid(500px 945px, 768px 1440px, fit);
+  }
+}
+
+.p-company__row {
+  display: grid;
+  grid-template-columns: fluid(112px 390px, 375px 1440px) 1fr;
+  align-items: center;
+  column-gap: calc(10 * var(--torem));
+  padding-block: fluid(16px 32px, 375px 1440px, fit);
+  padding-inline: fluid(10px 42px, 375px 1440px, fit);
+  border-block-start: 1px solid #282828;
+
+  &:last-child {
+    border-block-end: 1px solid #282828;
+  }
+}
+
+.p-company__label {
+  font-family: var(--font-sans-ja);
+  font-weight: 800;
+  font-size: fluid(12px 18px, 375px 1440px, fit);
+  letter-spacing: 0.2em;
+  color: var(--color, #282828);
+}
+
+.p-company__value {
+  font-family: var(--font-sans-ja);
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: fluid(11px 17px, 375px 1440px, fit);
+  line-height: calc(12 / 11);
+  letter-spacing: 0.05em;
+  color: var(--color, #282828);
+
+  @media (--md) {
+    letter-spacing: 0.2em;
+  }
+}

@@ -3,8 +3,14 @@
   top: 0;
   right: 0;
   left: 12.6%;
-  height: 100%;
+  block-size: calc(780 * var(--torem));
   pointer-events: none;
+  @media (--md) {
+    block-size: calc(1400 * var(--torem));
+  }
+  @media (--md) {
+    block-size: fluid(1400px 1800px, 1440px 1920px, free);
+  }
 }
 
 .c-shape-bg__item {
@@ -21,7 +27,7 @@
 }
 
 .c-shape-bg__item--green {
-  top: fluid(80px -300px, 375px 768px, free);
+  top: fluid(85px -300px, 375px 768px, free);
   left: -207px;
   z-index: 1;
   inline-size: fluid(325px 650px, 375px 768px, free);
@@ -34,41 +40,41 @@
 }
 
 .c-shape-bg__item--blue {
-  top: 50%;
+  top: 43%;
   right: -180px;
   z-index: 3;
   inline-size: fluid(346px 700px, 375px 768px, free);
   @media (--md) {
-    top: fluid(-300px -300px, 1440px 1920px, free);
-    right: fluid(-380px -500px, 1440px 1920px, free);
+    top: fluid(-200px -300px, 1440px 1920px, free);
+    right: fluid(-300px -500px, 1440px 1920px, free);
     inline-size: fluid(829px 1109px, 1440px 1920px, free);
   }
 }
 
 .c-shape-bg__item--red {
-  top: 60%;
+  top: 50%;
   left: -200px;
   z-index: 2;
-  inline-size: fluid(398px 800px, 375px 768px, free);
+  inline-size: fluid(450px 800px, 375px 768px, free);
   @media (--md) {
     top: initial;
-    right: fluid(-300px -350px, 1440px 1920px, free);
-    bottom: fluid(-100px -500px, 1440px 1920px, free);
+    right: fluid(-150px -270px, 1440px 1920px, free);
+    bottom: fluid(300px 400px, 1440px 1920px, free);
     left: initial;
     inline-size: fluid(931px 1245px, 1440px 1920px, free);
   }
 }
 
 .c-shape-bg__item--yellow {
-  top: fluid(40px 50px, 375px 768px, free);
+  top: fluid(25px 50px, 375px 768px, free);
   left: fluid(180px 200px, 375px 768px, free);
   z-index: 1;
   inline-size: fluid(381px 800px, 375px 768px, free);
   /* width: 74%; */
   @media (--md) {
     top: initial;
-    bottom: fluid(-400px -800px, 1440px 1920px, free);
-    left: fluid(180px 50px, 1440px 1920px, free);
+    bottom: fluid(-50px -50px, 1440px 1920px, free);
+    left: fluid(50px 50px, 1440px 1920px, free);
     inline-size: fluid(931px 1245px, 1440px 1920px, free);
   }
 }

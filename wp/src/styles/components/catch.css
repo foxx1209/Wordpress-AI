@@ -1,0 +1,15 @@
+.p-catch{
+  display: grid;
+  place-items: center;
+  padding-block:calc( 70* var(--torem));
+
+      @media (--md) {
+          padding-block:fluid(70px 230px, 768px 1440px, fit);
+          ;
+        
+      }
+  
+}
+.p-catch__wrapper{
+  margin-block-start: 0;
+}
