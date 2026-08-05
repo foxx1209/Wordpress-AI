@@ -16,7 +16,10 @@
     <div class="p-blur__wrapper">
       <section class="p-mission" id="mission">
         <div class="p-mission__inner l-inner">
-          <h2 class="p-mission__title">OUR MISSION</h2>
+          <h2 class="p-mission__title js-title-reveal">
+            <span class="visually-hidden">OUR MISSION</span>
+            <span aria-hidden="true"><?php echo link_char_reveal('OUR MISSION'); ?></span>
+          </h2>
 
           <p class="p-mission__lead">可能性をつなぎ、<br class="p-mission__lead-break">豊かな未来をつくる</p>
 
@@ -32,7 +35,10 @@
       <section class="p-buziness" id="business">
         <div class="p-buziness__inner l-inner">
           <div class="p-buziness__heading">
-            <h2 class="p-buziness__title">BUSINESS</h2>
+            <h2 class="p-buziness__title js-title-reveal">
+              <span class="visually-hidden">BUSINESS</span>
+              <span aria-hidden="true"><?php echo link_char_reveal('BUSINESS'); ?></span>
+            </h2>
             <p class="p-buziness__subtitle">事業内容</p>
           </div>
 
@@ -244,8 +250,7 @@
 
                   <div class="p-business__service-intro">
                     <h3 class="p-business__service-brand-title">Link Agent<span class="p-business__service-brand-title-sub">（RPO）</span></h3>
-                    <img class="
-                     p-business__service-intro-illust--linkagent" src="<?php echo esc_url(get_theme_file_uri('assets/images/top/service-linkagent-illust.png')); ?>" width="423" height="292" alt="" loading="lazy" decoding="async">
+                    <img class="p-business__service-intro-illust p-business__service-intro-illust--linkagent" src="<?php echo esc_url(get_theme_file_uri('assets/images/top/service-linkagent-illust.png')); ?>" width="423" height="292" alt="" loading="lazy" decoding="async">
                     <p class="p-business__service-intro-text p-business__service-intro-text--linkagent">採用戦略の立案および実行をトータルにご支援します。採用手法やチャネルの選定をはじめ、採用にかかわるプロセスの様々なシーンを最適化し、求める人材の採用成功を目指します。</p>
                   </div>
                 </div>
@@ -253,7 +258,7 @@
 
             </div>
             <div class="p-business__content">
-              <div class="p-business-detail__item p-business-detail__item--itdx">
+              <div class="p-business-detail__item p-business-detail__item--itdx js-fadein">
                 <span class="p-business-detail__number">02</span>
                 <p class="p-business-detail__label">システムエンジニアリングサービス/<br>開発受託サービス</p>
                 <p class="p-business-detail__name">IT/DX事業</p>
@@ -264,16 +269,16 @@
               </div>
 
               <div class="p-business__service-card p-business__service-card--itdx-ses">
-                <div class="p-business__service-tag p-business__service-tag--blue">
+                <div class="p-business__service-tag p-business__service-tag--blue js-fadein">
                   <span class="p-business__service-tag-full">IT/webシステム全体に<br class="u-sp">お困りの方向け</span>
                 </div>
 
-                <div class="p-business__service-intro">
+                <div class="p-business__service-intro js-fadein">
                   <h3 class="p-business__service-heading">システム<br>エンジニアリングサービス</h3>
                   <p class="p-business__service-intro-text">IT/webシステムの設計、構築、開発、及び運用並びに保守<br class="u-pc">などの領域で幅広いサービスを提供し、クライアントの<br class="u-sp">ニーズに合った効果的な技術の実現を支援します。</p>
                 </div>
 
-                <div class="p-business__service-flow">
+                <div class="p-business__service-flow js-fadein">
                   <?php get_template_part('template/parts/c-title', null, ['en' => 'FLOW', 'ja' => 'ご支援の流れ']); ?>
                   <div class="p-business__service-flow-diagram">
                     <img class="" src="<?php echo esc_url(get_theme_file_uri('assets/images/top/service-itdx-flow-pc.png')); ?>" width="899" height="591" alt="ご依頼企業様からのご相談・ご依頼を受け、Link SES teamが駐在開発でエンジニアを企業様へ派遣し、マネジメントを行う流れ" loading="lazy" decoding="async">
@@ -282,11 +287,11 @@
               </div>
 
               <div class="p-business__service-card p-business__service-card--itdx-dev">
-                <div class="p-business__service-tag p-business__service-tag--blue">
+                <div class="p-business__service-tag p-business__service-tag--blue js-fadein">
                   <span class="p-business__service-tag-full">ソフトウェア開発に<br class="u-sp">お困りの方向け</span>
                 </div>
 
-                <div class="p-business__service-intro">
+                <div class="p-business__service-intro js-fadein">
                   <h3 class="p-business__service-heading p-business__service-heading--itdx-dev">開発受託サービス</h3>
                   <img class="p-business__service-intro-illust p-business__service-intro-illust--itdx-dev" src="<?php echo esc_url(get_theme_file_uri('assets/images/top/service-itdx-software.png')); ?>" width="433" height="277" alt="" loading="lazy" decoding="async">
                   <p class="p-business__service-intro-text p-business__service-intro-text--itdx-dev">当社の受託開発では、幅広い業界やプロジェクトに対して、カスタムソフトウェアおよびアプリケーションの開発を行っています。お客様のニーズに合わせて、高品質なソフトウェアソリューションを提供します。</p>
@@ -295,7 +300,7 @@
 
             </div>
             <div class="p-business__content">
-              <div class="p-business-detail__item p-business-detail__item--webmarketing">
+              <div class="p-business-detail__item p-business-detail__item--webmarketing js-fadein">
                 <span class="p-business-detail__number">03</span>
                 <p class="p-business-detail__label">ブランド認知や集客支援サービス</p>
                 <p class="p-business-detail__name">Web<br class="u-sp">マーケティング<br class="u-sp">事業</p>
@@ -306,15 +311,15 @@
               </div>
 
               <div class="p-business__service-webmarketing">
-                <div class="p-business__service-scope">
+                <div class="p-business__service-scope js-fadein">
                   <?php get_template_part('template/parts/c-title', null, ['en' => 'SCOPE', 'ja' => 'ご支援可能媒体（一部）']); ?>
-                  <div class="p-business__service-scope-box">
+                  <div class="p-business__service-scope-box js-fadein">
                     <img class="p-business__service-scope-illust u-pc" src="<?php echo esc_url(get_theme_file_uri('assets/images/top/service-webmarketing-scope-pc.png')); ?>" width="1033" height="484" alt="LINE、Instagram、X、Google、Yahoo!など、内容に応じ様々な媒体での支援を行っていきます" loading="lazy" decoding="async">
                     <img class="p-business__service-scope-illust u-sp" src="<?php echo esc_url(get_theme_file_uri('assets/images/top/service-webmarketing-scope-sp.png')); ?>" width="292" height="281" alt="LINE、Instagram、X、Google、Yahoo!など、内容に応じ様々な媒体での支援を行っていきます" loading="lazy" decoding="async">
                   </div>
                 </div>
 
-                <div class="p-business__service-flow">
+                <div class="p-business__service-flow js-fadein">
                   <?php get_template_part('template/parts/c-title', null, ['en' => 'FLOW', 'ja' => 'ご支援の流れ']); ?>
 
                   <?php
@@ -351,7 +356,7 @@
                   $webmarketing_flow_count = count($webmarketing_flow_steps);
                   ?>
 
-                  <div class="p-business__service-flow-list">
+                  <div class="p-business__service-flow-list js-fadein">
                     <?php foreach ($webmarketing_flow_steps as $index => $step): ?>
                       <div class="p-business__service-flow-item">
                         <p class="p-business__service-flow-title"><?php echo wp_kses($step['title'], ['br' => ['class' => true]]); ?></p>
@@ -388,7 +393,7 @@
           ?>
 
           <?php if ($news_query->have_posts()): ?>
-            <ul class="p-news__list">
+            <ul class="p-news__list js-fadein">
               <?php while ($news_query->have_posts()): $news_query->the_post(); ?>
                 <?php
                 $news_terms = get_the_terms(get_the_ID(), 'news_category');
@@ -486,7 +491,7 @@
           ];
           ?>
 
-          <dl class="p-company__table">
+          <dl class="p-company__table js-fadein">
             <?php foreach ($company_items as $item): ?>
               <div class="p-company__row">
                 <dt class="p-company__label"><?php echo esc_html($item['label']); ?></dt>
@@ -501,7 +506,7 @@
 
       <section class="p-contact" id="contact">
         <div class="p-contact__inner l-inner">
-          <div class="p-contact__card">
+          <div class="p-contact__card js-fadein">
             <?php get_template_part('template/parts/c-title', null, ['en' => 'CONTACT', 'ja' => 'お問い合わせ']); ?>
             <?php echo do_shortcode(do_shortcode('[contact-form-7 id="139" title="お問い合わせ（TOPページ）"]')); ?>
           </div>
@@ -510,7 +515,7 @@
 
     </div>
   </div>
-  <section class="p-catch">
+  <section class="p-catch js-fadein">
     <hgroup class="p-catch__wrapper p-top__mv-title-wrapper">
       <h1 class="p-top__mv-ja">可能性をつなぎ、<br>豊かな未来をつくる</h1>
       <p class="p-top__mv-en">FORWARD<br>TOGETHER

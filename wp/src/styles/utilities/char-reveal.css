@@ -1,0 +1,29 @@
+/* --------------------------------------------------
+   スクロール文字送りアニメーション
+   対象要素に .js-title-reveal を付与し、内側の文字を
+   link_char_reveal() で .u-char に分割すると、画面内に
+   入った時に一文字ずつ出現する（title-reveal.js とセット）
+-------------------------------------------------- */
+.u-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.4em);
+  transition:
+    opacity var(--duration-fast) var(--ease-out-quart),
+    transform var(--duration-fast) var(--ease-out-quart);
+  transition-delay: calc(var(--char-i, 0) * 0.04s);
+}
+
+.js-title-reveal.is-inview .u-char {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u-char {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0s;
+  }
+}

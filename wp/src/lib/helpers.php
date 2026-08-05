@@ -98,3 +98,28 @@ function link_inline_svg($filename, $dir = 'assets/icons')
     // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     echo file_get_contents($file);
 }
+
+/**
+ * テキストを1文字ずつ.u-charでラップしたHTMLを生成する
+ * （js-title-reveal + scroll-title-reveal.js とセットで、スクロール時に一文字ずつ出現させる）
+ *
+ * @param string $text 分割対象のプレーンテキスト（HTMLタグ不可）
+ * @return string
+ */
+function link_char_reveal($text)
+{
+    $html = '';
+    $i = 0;
+
+    foreach (mb_str_split($text) as $char) {
+        if (trim($char) === '') {
+            $html .= esc_html($char);
+            continue;
+        }
+
+        $html .= '<span class="u-char" style="--char-i:' . $i . '">' . esc_html($char) . '</span>';
+        $i++;
+    }
+
+    return $html;
+}

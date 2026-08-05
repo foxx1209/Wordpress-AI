@@ -1,0 +1,36 @@
+html.is-loading,
+html.is-loading body {
+  overflow: hidden;
+}
+
+.p-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-background-color);
+}
+
+.p-loader__inner {
+  inline-size: min(50vw, calc(200 * var(--torem)));
+
+  @media (--md) {
+    inline-size: min(24vw, 260px);
+  }
+}
+
+.p-loader__logo {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  opacity: 0;
+  transform: scale(0.88);
+  transform-origin: center;
+}
+
+.p-loader.is-reduced .p-loader__logo {
+  opacity: 1;
+  transform: scale(1);
+}

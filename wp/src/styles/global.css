@@ -12,6 +12,7 @@
 /* Components */
 @import "./components/grid.css" layer(components);
 @import "./components/container.css" layer(components);
+@import "./components/loader.css" layer(components);
 @import "./components/title.css" layer(components);
 @import "./components/shape-bg.css" layer(components);
 @import "./components/header.css" layer(components);
@@ -39,3 +40,4 @@
 /* Utilities */
 @import "./utilities/utilities.css" layer(utilities);
 @import "./utilities/fadein.css" layer(utilities);
+@import "./utilities/char-reveal.css" layer(utilities);

@@ -11,16 +11,26 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <noscript><style>.p-loader { display: none; }</style></noscript>
+  <script>document.documentElement.classList.add('is-loading');</script>
+
   <?php
   $header_logo_src = esc_url(get_theme_file_uri('assets/images/header/logo.svg'));
   $header_contact_icon_src = esc_url(get_theme_file_uri('assets/images/header/icon-contact.svg'));
   $header_nav_items = [
-    ['label' => '会社概要', 'href' => home_url('/about/')],
+    ['label' => '会社概要', 'href' => home_url('/#company')],
     ['label' => '事業内容', 'href' => home_url('/#business')],
-    ['label' => '採用情報', 'href' => '#'],
-    ['label' => 'お知らせ', 'href' => '#'],
+    ['label' => '採用情報', 'href' => home_url('/recruit/')],
+    ['label' => 'お知らせ', 'href' => home_url('/news/')],
   ];
   ?>
+
+  <div class="p-loader js-loader" aria-hidden="true">
+    <div class="p-loader__inner">
+      <img class="p-loader__logo js-loader-logo" src="<?php echo $header_logo_src; ?>" width="160" height="58" alt="">
+    </div>
+  </div>
+
   <header class="p-header" id="site-header">
     <div class="p-header__inner">
       <p class="p-header__logo">

@@ -10,6 +10,19 @@
   }
 }
 
+/* スムーススクロール時に固定ヘッダーへ潜り込まないようにするオフセット */
+#mission,
+#business,
+#news,
+#company,
+#contact {
+  scroll-margin-top: calc(63 * var(--torem));
+
+  @media (--header-nav) {
+    scroll-margin-top: 100px;
+  }
+}
+
 .p-header__inner {
   display: flex;
   align-items: center;
@@ -56,19 +69,19 @@
   inset-inline-start: 0;
   inline-size: 3px;
   block-size: 16px;
+  text-decoration: none;
   content: "";
   background-color: rgb(40 40 40 / 0.3);
   border-radius: var(--torem);
   translate: 0 -50%;
-  text-decoration: none;
 }
 
 .p-header__nav-link {
+  padding: calc(20 * var(--torem));
   font-size: fluid(16px 18px, snap);
   font-weight: 800;
   color: #000;
   letter-spacing: 0.15em;
-  padding: calc(20 * var(--torem));
   text-decoration: none;
 }
 
@@ -77,8 +90,8 @@
 
   @media (--header-nav) {
     display: block;
-    margin-inline-start: calc(26 * var(--torem));
     inline-size: min(100%, calc(229 * var(--torem)));
+    margin-inline-start: calc(26 * var(--torem));
   }
 }
 
@@ -88,11 +101,11 @@
   gap: calc(10 * var(--torem));
   align-items: center;
   justify-content: center;
+  inline-size: 100%;
   padding: calc(14 * var(--torem)) calc(10 * var(--torem));
   white-space: nowrap;
   background-color: var(--color-dark);
   border-radius: 999px;
-  inline-size: 100%;
 }
 
 .p-header__contact-icon,
@@ -224,8 +237,8 @@
   font-weight: 800;
   color: #000;
   letter-spacing: 0.05em;
-  border-block-end: 1px solid rgb(0 0 0 / 0.08);
   text-decoration: none;
+  border-block-end: 1px solid rgb(0 0 0 / 0.08);
 }
 
 .p-drawer__cta {

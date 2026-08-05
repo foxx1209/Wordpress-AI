@@ -10,7 +10,13 @@
 $en = $args['en'] ?? '';
 $ja = $args['ja'] ?? '';
 ?>
-<div class="c-title">
-  <h2 class="c-title__en"><?php echo esc_html($en); ?></h2>
-  <p class="c-title__ja"><?php echo esc_html($ja); ?></p>
+<div class="c-title js-title-reveal">
+  <h2 class="c-title__en">
+    <span class="visually-hidden"><?php echo esc_html($en); ?></span>
+    <span class="c-title__chars" aria-hidden="true"><?php echo link_char_reveal($en); ?></span>
+  </h2>
+  <p class="c-title__ja">
+    <span class="visually-hidden"><?php echo esc_html($ja); ?></span>
+    <span class="c-title__chars" aria-hidden="true"><?php echo link_char_reveal($ja); ?></span>
+  </p>
 </div>
